@@ -125,13 +125,13 @@ function App() {
   }, []);
 
   const initGame = () => {
-    if (input == num) {
+    if (input === num) {
       setAns("Congratulations You Guessed Correct");
       setChanges((prev) => prev - 1);
       setGameOver(true);
     } else if (input > num) {
       setChanges((prev) => prev - 1);
-      if (changes == 1) {
+      if (changes === 1) {
         setAns("Wrong Answer,Better Luck next Time");
         setGameOver(true);
       } else {
@@ -139,7 +139,7 @@ function App() {
       }
     } else if (input < num) {
       setChanges((prev) => prev - 1);
-      if (changes == 1) {
+      if (changes === 1) {
         setAns("Wrong Answer,Better Luck next Time");
         setGameOver(true);
       } else {
